@@ -24,7 +24,6 @@ public class NetworkSelectActivity extends AppCompatActivity {
 
     }
 
-    public void networkOnClick(View view){
+    //  OnClicks
 
-    }
 }
