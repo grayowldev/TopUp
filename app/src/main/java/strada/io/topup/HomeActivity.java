@@ -13,6 +13,7 @@ import android.widget.Button;
 public class HomeActivity extends AppCompatActivity {
     Strada controller = new Strada();
     Button checkBalBtn, addBalBtn;
+    //userNetwork = getNetwork();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,9 +24,14 @@ public class HomeActivity extends AppCompatActivity {
         checkBalBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                checkBalance("Tmobile");
             }
         });
+    }
+
+    public void checkBalance(String network){
+        String checkBalCode = controller.getCheckBalCode(network);
+        startCallFunction(checkBalCode);
     }
 
     public void startCallFunction(String functionCode) {

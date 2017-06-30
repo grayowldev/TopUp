@@ -2,4 +2,5 @@
     <string name="app_name">Top Up</string>
     <string name="check_function">Check Balance</string>
     <string name="add_function">Add Balance</string>
+    <string name="tmobile">T-Mobile</string>
 </resources>
