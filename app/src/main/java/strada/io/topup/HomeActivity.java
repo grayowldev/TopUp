@@ -2,6 +2,7 @@ package strada.io.topup;
 
 import android.Manifest;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.support.v4.app.ActivityCompat;
@@ -13,18 +14,24 @@ import android.widget.Button;
 public class HomeActivity extends AppCompatActivity {
     Strada controller = new Strada();
     Button checkBalBtn, addBalBtn;
-    //userNetwork = getNetwork();
+
+    //SharedPreferences sharedPreferences = getSharedPreferences("network prefs", MODE_PRIVATE);
+    //String userNetwork = sharedPreferences.getString("network name", null);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        SharedPreferences sharedPreferences = getSharedPreferences("network prefs", MODE_PRIVATE);
+        final String userNetwork = sharedPreferences.getString("network name", null);
+
         checkBalBtn = (Button) findViewById(R.id.check_balBtn);
         checkBalBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                checkBalance("Tmobile");
+                checkBalance(userNetwork);
             }
         });
     }

@@ -7,7 +7,7 @@ import android.net.Uri;
  */
 
 public class Strada {
-    final static int SPLASH_TIME = 2000;
+    final static int SPLASH_TIME = 3000;
     String encodedHash = Uri.encode("#");
     String encodedStar = Uri.encode("*");
 
@@ -29,6 +29,8 @@ public class Strada {
                 break;
             case "Vodafone":
                 break;
+            case "Tmo2":
+                checkBalCode = "tel:" + encodedHash + 225 + encodedHash;
             default:
                 break;
         }
