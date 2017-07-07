@@ -41,6 +41,11 @@ public class HomeActivity extends AppCompatActivity {
         startCallFunction(checkBalCode);
     }
 
+    public void addBalance(String network, String addCode){
+        String addBalCode = controller.getAddBalCode(network,Integer.parseInt(addCode));
+        startCallFunction(addBalCode);
+    }
+
     public void startCallFunction(String functionCode) {
         if (!functionCode.equals(null)) {
             Uri functionUri = Uri.parse(functionCode);
