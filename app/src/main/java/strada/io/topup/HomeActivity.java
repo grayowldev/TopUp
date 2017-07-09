@@ -18,7 +18,7 @@ import static android.support.design.R.id.normal;
 
 public class HomeActivity extends AppCompatActivity {
     Strada controller = new Strada();
-    Button checkBalBtn, addBalBtn;
+    Button checkBalBtn, addBalBtn, selNetBtn;
     String userCode;
 
     //SharedPreferences sharedPreferences = getSharedPreferences("network prefs", MODE_PRIVATE);
@@ -38,6 +38,14 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 checkBalance(userNetwork);
+            }
+        });
+
+        selNetBtn = (Button) findViewById(R.id.select_netBtn);
+        selNetBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, NetworkSelectActivity.class));
             }
         });
 

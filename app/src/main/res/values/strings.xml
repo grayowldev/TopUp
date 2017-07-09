@@ -3,5 +3,7 @@
     <string name="check_function">Check \nBalance</string>
     <string name="add_function">Add \nBalance</string>
     <string name="tmobile">T-Mobile</string>
+    <string name="airtel">Airtel</string>
     <string name="adder_message">Please enter the numbers located on your scratch card below.</string>
+    <string name="network_instruction1">Please select your network.</string>
 </resources>

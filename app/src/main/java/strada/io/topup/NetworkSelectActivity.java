@@ -42,10 +42,10 @@ public class NetworkSelectActivity extends AppCompatActivity {
             startActivity(new Intent(NetworkSelectActivity.this, HomeActivity.class));
         }
 
-        else if (view.getId() == R.id.tmo2_btn){
+        else if (view.getId() == R.id.airtel_netBtn){
             SharedPreferences sharedPreferences = getSharedPreferences("network prefs", MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putString("network name", "Tmo2");
+            editor.putString("network name", "Airtel");
             editor.commit();
 
             startActivity(new Intent(NetworkSelectActivity.this, HomeActivity.class));

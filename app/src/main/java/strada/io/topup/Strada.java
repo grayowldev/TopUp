@@ -19,6 +19,7 @@ public class Strada {
                 checkBalCode = "tel:" + encodedHash + 686 + encodedHash;
                 break;
             case "Airtel":
+                checkBalCode = "tel:" + encodedStar + 133 + encodedHash;
                 break;
             case "MTN":
                 break;
@@ -46,6 +47,7 @@ public class Strada {
                 addBalCode = "tel:" + encodedHash + 686 + encodedHash;
                 break;
             case "Airtel":
+                addBalCode = "tel:" + encodedStar + 134 + encodedStar + topupCode + encodedHash;
                 break;
             case "MTN":
                 break;
