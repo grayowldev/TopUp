@@ -5,15 +5,21 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+
+import static android.support.design.R.id.normal;
 
 public class HomeActivity extends AppCompatActivity {
     Strada controller = new Strada();
     Button checkBalBtn, addBalBtn;
+    String userCode;
 
     //SharedPreferences sharedPreferences = getSharedPreferences("network prefs", MODE_PRIVATE);
     //String userNetwork = sharedPreferences.getString("network name", null);
@@ -32,6 +38,35 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 checkBalance(userNetwork);
+            }
+        });
+
+        addBalBtn = (Button) findViewById(R.id.add_balBtn);
+        addBalBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder alertBuilder = new AlertDialog.Builder(HomeActivity.this);
+                View mView = getLayoutInflater().inflate(R.layout.adder_dialog, null);
+                final EditText balCodeEdit = (EditText) mView.findViewById(R.id.balCode_edit);
+                Button addBalDiaBtn = (Button) mView.findViewById(R.id.addBal_diaBtn);
+
+                addBalDiaBtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        if(balCodeEdit.getText().toString().isEmpty()){
+                            Snackbar snackbar = Snackbar.make(view,"Please enter your Top Up code",Snackbar.LENGTH_LONG);
+                            snackbar.show();
+                        }
+                        else {
+                            addBalance(userNetwork,balCodeEdit.getText().toString());
+                        }
+
+                    }
+                });
+
+                alertBuilder.setView(mView);
+                AlertDialog dialog = alertBuilder.create();
+                dialog.show();
             }
         });
     }

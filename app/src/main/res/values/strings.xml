@@ -3,4 +3,5 @@
     <string name="check_function">Check \nBalance</string>
     <string name="add_function">Add \nBalance</string>
     <string name="tmobile">T-Mobile</string>
+    <string name="adder_message">Please enter the numbers located on your scratch card below.</string>
 </resources>
