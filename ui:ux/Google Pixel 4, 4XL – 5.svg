@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="412" height="870" viewBox="0 0 412 870">
+  <defs>
+    <clipPath id="clip-Google_Pixel_4_4XL_5">
+      <rect width="412" height="870"/>
+    </clipPath>
+  </defs>
+  <g id="Google_Pixel_4_4XL_5" data-name="Google Pixel 4, 4XL – 5" clip-path="url(#clip-Google_Pixel_4_4XL_5)">
+    <rect width="412" height="870" fill="#fff"/>
+    <g id="Rectangle_1" data-name="Rectangle 1" fill="#1438a6" stroke="#707070" stroke-width="1">
+      <rect width="412" height="870" stroke="none"/>
+      <rect x="0.5" y="0.5" width="411" height="869" fill="none"/>
+    </g>
+    <text id="TOP_UP" data-name="TOP UP" transform="translate(119 419)" fill="#fff" font-size="74" font-family="RiftSoft-Medium, Rift Soft" font-weight="500" letter-spacing="0.016em"><tspan x="0" y="0">TOP UP</tspan></text>
+  </g>
+</svg>
