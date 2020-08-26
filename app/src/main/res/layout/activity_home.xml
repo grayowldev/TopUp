@@ -40,13 +40,13 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/home_rechargeBtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:includeFontPadding="true"
         android:paddingTop="14dp"
         android:paddingBottom="14dp"
-        android:text="Button"
+        android:text="Recharge"
         android:textSize="14sp"
         app:iconPadding="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -55,7 +55,8 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
+        android:id="@+id/home_rechargeInput"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -68,7 +69,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="hint" />
+            android:hint="Recharge Card"
+            android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
