@@ -1,8 +1,12 @@
 package com.ideogramm.topup;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -54,13 +58,18 @@ public class HomeActivity extends AppCompatActivity {
         rechargeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                network = textInputLayout.getEditText().getText().toString();
-                rechargeCode = rechargeInput.getEditText().getText().toString();
+                network = textInputLayout.getEditText().getText().toString().trim();
+                rechargeCode = rechargeInput.getEditText().getText().toString().trim();
 
-
+                if (ContextCompat.checkSelfPermission(getApplicationContext(), Manifest
+                .permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED){
+                    ActivityCompat.requestPermissions(HomeActivity.this, new String[] {Manifest.permission.CALL_PHONE}, 1);
+                }
                  if (!network.isEmpty() && !rechargeCode.isEmpty()){
 //                     textView.setText(rechargeCode);
-                     String processNum = "tel:" + getProcessNumber("Ghana",network) + "#";
+                     String encodedHash = Uri.encode("#");
+                     String processNum = "tel:" + getProcessNumber("Ghana",network) + rechargeCode + encodedHash;
+                     textView.setText(processNum);
                      Intent callIntent = new Intent(Intent.ACTION_CALL);
                      callIntent.setData(Uri.parse(processNum));
                      startActivity(callIntent);
@@ -73,7 +82,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private String getProcessNumber(String country, String network) {
-        if (country.equals("MTN")){
+        if (network.equals("MTN")){
             return "*125*";
         }else {
             Toast.makeText(getApplicationContext(), network + " is currently unsupported", Toast.LENGTH_SHORT).show();

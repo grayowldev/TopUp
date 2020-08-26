@@ -6,6 +6,8 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/TopUp-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/TopUp-app.iml" group="TopUp/app" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="TopUp/app" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/git-files-TopUp.iml" filepath="$PROJECT_DIR$/.idea/modules/git-files-TopUp.iml" group="TopUp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/git-projects-TopUp.iml" filepath="$PROJECT_DIR$/.idea/modules/git-projects-TopUp.iml" group="TopUp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/git-projects-TopUp-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/git-projects-TopUp-app.iml" group="TopUp/app" />
     </modules>
   </component>
 </project>
