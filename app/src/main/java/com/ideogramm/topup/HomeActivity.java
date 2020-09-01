@@ -82,11 +82,23 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private String getProcessNumber(String country, String network) {
-        if (network.equals("MTN")){
+        if (network.equalsIgnoreCase("mtn")){
             return "*125*";
+        }else if (network.equalsIgnoreCase("tigo") || network.equalsIgnoreCase("airtel")) {
+            return "*134*";
+        } else if (network.equalsIgnoreCase("glo")){
+            return "*134*";
+        } else if (network.equalsIgnoreCase("vodafone")) {
+            return "*135";
+        } else if (network.equalsIgnoreCase("tmobile")){
+            return null;
         }else {
             Toast.makeText(getApplicationContext(), network + " is currently unsupported", Toast.LENGTH_SHORT).show();
             return null;
         }
+    }
+
+    private String getBalance(String network) {
+        return null;
     }
 }
