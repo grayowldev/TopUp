@@ -19,8 +19,8 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent toHomeIntent = new Intent(MainActivity.this, HomeActivity.class);
-                startActivity(toHomeIntent);
+                Intent toWelcomeIntent = new Intent(MainActivity.this, WelcomeActivity.class);
+                startActivity(toWelcomeIntent);
                 finish();
             }
         },SPLASH_SCREEN_TIMEOUT);

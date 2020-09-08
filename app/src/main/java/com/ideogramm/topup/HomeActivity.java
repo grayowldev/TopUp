@@ -40,10 +40,10 @@ public class HomeActivity extends AppCompatActivity {
         textView = findViewById(R.id.textView2);
 
         String[] networkList = {
-                "MTN",
-                "Tigo",
-                "Glo",
-                "Vodafone",
+//                "MTN",
+//                "Tigo",
+//                "Glo",
+//                "Vodafone",
                 "Tmobile"
         };
 
